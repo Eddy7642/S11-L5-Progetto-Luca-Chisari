@@ -1,1 +1,22 @@
-<p>user-profile works!</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>User Profile</h2>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Name: {{ userDetails.name }}</h5>
+          <p class="card-text">Email: {{ userDetails.email }}</p>
+          <p class="card-text">Joined: {{ userDetails.joined }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2>Favorites</h2>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let movie of favorites">
+          {{ movie.title }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

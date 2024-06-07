@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { MoviesRoutingModule } from './movies-routing.module';
-import { MoviesComponent } from './movies.component';
+import { RouterModule, Routes } from '@angular/router';
 import { MovieListComponent } from './movie-list/movie-list.component';
 
+const routes: Routes = [
+  { path: '', component: MovieListComponent }
+];
 
 @NgModule({
-  declarations: [
-    MoviesComponent,
-    MovieListComponent
-  ],
+  declarations: [MovieListComponent],
   imports: [
     CommonModule,
-    MoviesRoutingModule
+    RouterModule.forChild(routes)
   ]
 })
 export class MoviesModule { }
